@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img{
+    overflow: hidden;
+}
+.notifica{
+    width: 30px;
+    height: 30px;
+    border-radius: 20px;
+    background-color: rgba(100, 100, 100, 0.275);
+}
+
+div.notifica::after{
+    content: "";
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: blue;
+
+}
+
+div.account{
+    width: 30px;
+    height: 30px;
+}
+
+
+ div.account::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 3px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 2px solid white;
+    background-color: rgb(45, 160, 45);
+} 
+
+ 
+div.jumbo{
+    display: flex;
+    background-color: rgb(110, 43, 226);
+    justify-content: center;
+}
+
+
+.media{
+    order: 3;
+}
+
+@media  screen and (max-width: 1024px) {
+    .media{
+        order: 0;
+    }
+    
+}
+
+
+
+#banner i{
+    font-size: 15px;
+    color: rgb(222, 184, 135);;
+    border-radius: 50%;
+    padding: 20px;
+    background-color: rgba(222, 184, 135, 0.254);
+}
+/*  media per le card da rivedere  */
+@media screen and (max-width: 1024px) {/*quando sono gli schermi sono inferiori a 1024px*/
+    #banner div.row {
+      flex-wrap: wrap!important;
+    }
+    a[class*="carousel-control"] {
+      pointer-events: auto;
+      opacity: 1;
+    }
+  }
+  
+  @media screen and (min-width: 1025px) {/*quando gli schermi sono superiori a 1025px*/
+    a[class*="carousel-control"] {
+      pointer-events: none;
+      opacity: 0.65;
+    }
+    #banner div div{
+        justify-content: center!important;
+    }
+  }
+  
+
+a[class*=carousel-control]{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.172);
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+a[data-bs-slide="prev"]{
+    left: -30px;
+    
+
+}
+a[data-bs-slide="next"]{
+    right: -30px;
+}
+
+div[class$="slide"]{
+    margin: 50px;
+}
+
+main{
+    background-color: rgba(112, 128, 144, 0.158)!important;
+}
+
+
+li.list-inline-item a{
+    text-decoration: none!important;
+    color: grey;
+}
